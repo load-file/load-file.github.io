@@ -19,3 +19,4 @@ Web Component to load external SVG or HTML files and inject them in the Document
 </load-file>
 ```
 
+https://github.com/load-file/load-file.github.io
