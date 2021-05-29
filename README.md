@@ -7,7 +7,7 @@ Web Component to load external SVG or HTML files and inject them in the Document
 <load-file replaceWith src="//load-file.github.io/heart.svg"></load-file>
 
 <load-file src="//load-file.github.io/heart.svg">
-  <!-- elements inside load-file are MOVED to shadowDOM -->
+  <!-- first style element inside load-file is MOVED to shadowDOM -->
   <style>
     svg {
       height: var(--height); /* CSS properties cascade into shadowDOM!! */
