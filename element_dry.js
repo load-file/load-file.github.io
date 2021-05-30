@@ -1,0 +1,1 @@
+customElements.define("load-file",class extends HTMLElement{async connectedCallback(R=this.shadowRoot||this.attachShadow({mode:"open"})){R.innerHTML=await(await fetch(this.getAttribute("src"))).text();R.append(...this.querySelectorAll("[shadowRoot]"));this.hasAttribute("replaceWith")&&this.replaceWith(...R.children)}})
