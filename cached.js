@@ -44,6 +44,7 @@ customElements.define(
 );
 
 function addSquare(color = "blue") {
+event?.stopImmediatePropagation();
   let lf = document.createElement("load-file");
   lf.setAttribute("src", `//svg-cdn.github.io/${color}.svg`);
   document.body.append(lf);
