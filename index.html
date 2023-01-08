@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script src="./cached.js"></script>
+</head>
+
+<body>
+    <style>
+        load-file {
+            height: 100px;
+            width: 100px;
+            display: inline-block
+        }
+    </style>
+    <h1>Loading external content, caching same URIs</h1>
+    <h3>Loaded URIs:</h3>
+    <p id="URIs"></p>
+    <load-file id=A1 src="//svg-cdn.github.io/heart.svg">
+        <style shadowRoot>
+            path:nth-child(2n+2) {
+                fill: red;
+            }
+        </style>
+    </load-file>
+
+    <load-file id=B1 src="//load-file.github.io/heart.svg">
+        <style shadowRoot>
+            path:nth-child(3n+2) {
+                fill: yellow;
+            }
+        </style>
+
+    </load-file>
+    <load-file id=B2 src="//load-file.github.io/heart.svg">
+        <style shadowRoot>
+            path:nth-child(1n+2) {
+                fill: blue;
+            }
+        </style>
+    </load-file>
+    <load-file id=A2 src="//svg-cdn.github.io/heart.svg"></load-file>
+    <load-file id=B3 src="//load-file.github.io/heart.svg"></load-file>
+    <h2>Loaded SVG from 2 sources</h2>
+    <h2>Delayed loaded SVG square, click to load more</h2>
+</body>
+
+</html>
