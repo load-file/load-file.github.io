@@ -46,6 +46,22 @@
     <button onclick="addSquare(this.innerHTML)">yellow</button>
     <button onclick="addSquare(this.innerHTML)">blue</button>
     <hr>
+    <script>
+        console.clear();
+
+        function addSquare(color = "blue") {
+            event?.stopImmediatePropagation();
+            let lf = document.createElement("load-file");
+            lf.setAttribute("src", `//svg-cdn.github.io/${color}.svg`);
+            document.body.append(lf);
+        }
+        setTimeout(() => {
+            addSquare("red");
+            document.body.onclick = () => {
+                addSquare();
+            };
+        }, 1000);
+    </script>
 </body>
 
 </html>
